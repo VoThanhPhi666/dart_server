@@ -12,6 +12,7 @@ Future<void> main(List<String> arguments) async {
 
   server.defaultResponseHeaders.contentType = ContentType.json;
   server.autoCompress = true;
+  print("branch changed to develop");
 }
 
 FutureOr<shelf.Response> handle(shelf.Request request) async {
