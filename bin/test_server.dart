@@ -11,6 +11,7 @@ Future<void> main(List<String> arguments) async {
   var server = await io.serve(handler, InternetAddress.anyIPv4, port);
 
   server.defaultResponseHeaders.contentType = ContentType.json;
+  server.autoCompress = true;
 }
 
 FutureOr<shelf.Response> handle(shelf.Request request) async {
